@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* 1. Header Section */
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("images/main_image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.bar{
+    margin: 1rem;
+    padding: 1rem;
+    color: rgb(237, 221, 221);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    height: 5vh;
+    
+    font-size: 1.5rem;
+}
+
+.intro{
+    padding: 5rem;
+    padding-bottom: 25rem;
+    
+    height: 90vh;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-content: center;
+ 
+}
+
+.intro__up{
+    padding: 1rem;
+    margin: 1rem;
+
+    color: #d89f0cdc;
+    text-align: left;
+    padding-left: 40px;
+    position: relative;
+}
+
+.intro__up::after{
+    content: "";
+
+    width: 35px;
+    height: 2px;
+    background:  #d89f0cdc;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+
+    border-radius: 100px;
+}
+
+
+.intro__middle{
+    margin-left: 1rem;
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+.intro__bottom{
+    color: rgb(221, 219, 219);
+    margin: 1rem 2rem 2rem 1rem;
+}
+.intro__bottom span{
+    color: rgb(255, 255, 255);
+}
