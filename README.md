@@ -1,1 +1,1 @@
-# WDAI_site
+First project for WDAI object at AGH University.
