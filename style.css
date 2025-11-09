@@ -31,17 +31,30 @@ header{
 .bar{
     margin: 1rem;
     padding: 1rem;
-    color: rgb(238, 231, 231);
     display: flex;
     justify-content: center;
-    gap: 20px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 5vh;
     
+    z-index: 3;
     font-size: 1.5rem;
+}
+
+.bar__elelement{
+    text-decoration: none;
+    color: rgb(238, 231, 231);
+    padding: 0 1rem;
+    font-family: var(--title-font);
+
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s;
+}
+.bar__elelement:hover{
+    color: var(--up-color);
+    transform: translateY(-5px);
 }
 
 .intro{
@@ -106,14 +119,26 @@ header{
 }
 
 .hero__card{
-    padding: 100px;
-    margin: 100px;
+    padding: 25px 100px 25px 100px;
+    margin: 25px 100px 25px 100px;
     display: flex;
     justify-content: space-around;
     flex: 1 1 auto;
     gap: 1rem;
-}
 
+    position: relative;
+
+}
+.hero__card::before{
+    content: "01";
+    font-family: var(--title-font);
+    font-size: 10rem;
+    color: #ffffff39;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
 
 .hero__left__card{
@@ -130,9 +155,38 @@ header{
 }
 
 
+.hero__left__card .intro__middle{
+    font-size: 2rem;
+}
+.intro__text{
+    margin: 1rem;
+    color: var(--title-color);
+    font-family: var(--text-font);
+
+}
+
+.second__card::before{
+    content: "02";
+    left: 75%;
+
+}
+.hero__card.second__card{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.third__card::before{
+    content: "03";
+}
+
+.footer{
+    background-color:  #4C8C9C;
+    text-align: center;
+    font-family: var(--title-font);
+    color: var(--up-color);
+}
+
+
 @media (max-width: 1200px){
-
-
 .hero__card{
     padding: 100px 0 100px 0;
     margin: 100px 0 100px 0;
@@ -141,6 +195,9 @@ header{
     justify-content: center;
     flex: 1 1 auto;
     gap: 1rem;
+}
+.hero__card.second__card{
+    flex-direction: column;
 }
 .right__image{
     width:100%;
@@ -161,14 +218,4 @@ header{
 .intro__bottom{
     font-size: 0.8rem;
 }
-}
-
-
-.hero__left__card .intro__middle{
-    font-size: 2rem;
-}
-.intro__text{
-    margin: 1rem;
-    color: var(--title-color);
-    font-family: var(--text-font);
 }
